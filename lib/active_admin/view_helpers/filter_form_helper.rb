@@ -136,6 +136,7 @@ module ActiveAdmin
       when Proc
         options[:collection] = options[:collection].call
       end
+      options = { :limit => 100 }.merge(options)
       super(method, options)
     end
 
